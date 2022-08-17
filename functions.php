@@ -16,7 +16,7 @@ function add_this_script_footer() {
         ( function($) {
             $( 'textarea[id^="form-field-"]' ).keyup( function() {
                 const submitBtn = $('.elementor-form button[type="submit"]');
-                if ( isUrl( $(this).val() ) ) {
+                if ( isUrl( $(this).val() ) || $(this).val().indexOf('@') != -1 || $(this).val().indexOf('http') != -1 || $(this).val().indexOf('www.') != -1 ) {
                     submitBtn.prop( 'disabled', true );
                 } else {
                     submitBtn.prop( 'disabled', false );
