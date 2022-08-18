@@ -2,14 +2,14 @@
 /*
 Plugin Name: Elementor No Spam
 Description: This plugin reduces spam on Elementor forms.
-Version: 1.0.0
+Version: 1.1.0
 Author: Pina Data
 Author URI: https://www.pinadata.com
 License: GPLv2 or later
 Text Domain: elementor-no-spam
 */
 
-// Prevent user to add an URL to ad textarea
+// Prevent user to add an URL into a textarea field (JavaScript)
 function add_this_script_footer() {
 ?>
     <script>
@@ -30,6 +30,28 @@ function add_this_script_footer() {
     </script>
 <?php }
 add_action( 'wp_footer', 'add_this_script_footer' );
+
+
+// Prevent user to add an URL into a textarea field (PHP)
+add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record, $ajax_handler ) {
+
+	$blacklist_terms = [
+        '@',
+		'wwww.',
+		'ftp.',
+		'http',
+		'.com',
+		'.ca',
+	];
+	
+	foreach ( $blacklist_terms as $term ) {
+		if ( str_contains( $field['value'], $term ) !== FALSE ) {
+			$ajax_handler->add_error( $field['id'], 'Invalid text, the term "' . $term . '" is not allowed.' );
+			return;
+		}
+	}
+
+}, 10, 3 );
     
     
 // Blacklist emails
@@ -118,8 +140,6 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 		'inquiry@automationdad.com',
 		'marketing@automationdad.com',
 		'tryjasperbot@gmail.com',
-	    	'sales@automationdad.com',
-	    	'greg@seoflashsystem.com',
     ];
 
     $email_domain = $field['value'];
