@@ -16,7 +16,16 @@ function add_this_script_footer() {
         ( function($) {
             $( 'textarea[id^="form-field-"]' ).keyup( function() {
                 const submitBtn = $('.elementor-form button[type="submit"]');
-                if ( isUrl( $(this).val() ) || $(this).val().indexOf('@') != -1 || $(this).val().indexOf('http') != -1 || $(this).val().indexOf('www.') != -1 ) {
+                if (
+			isUrl( $(this).val() )
+			|| $(this).val().indexOf('@') != -1
+			|| $(this).val().indexOf('www.') != -1
+			|| $(this).val().indexOf('ftp.') != -1
+			|| $(this).val().indexOf('http') != -1
+			|| $(this).val().indexOf('.com') != -1
+			|| $(this).val().indexOf('.ca') != -1
+			|| $(this).val().indexOf('bit.ly') != -1
+		) {
                     submitBtn.prop( 'disabled', true );
                 } else {
                     submitBtn.prop( 'disabled', false );
@@ -42,6 +51,7 @@ add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record
 		'http',
 		'.com',
 		'.ca',
+		'bit.ly',
 	];
 	
 	foreach ( $blacklist_terms as $term ) {
@@ -141,6 +151,7 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 	'marketing@automationdad.com',
 	'tryjasperbot@gmail.com',
 	'eharrison@globalrealestate.com',
+	'plumb.angelica@gmail.com',
     ];
 
     $email_domain = $field['value'];
