@@ -56,6 +56,8 @@ add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record
 		// Marketing services & cie.
 		'free marketing',
 		'Local Business Free Marketing Club',
+		'generating more traffic',
+		'local businesses',
 		// Phone numbers
 		'450',
 		'514',
@@ -162,6 +164,7 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 	'eharrison@globalrealestate.com',
 	'plumb.angelica@gmail.com',
 	'earnnetwork381@gmail.com',
+	'reliablewebsiteranker@gmail.com',
     ];
 
     $email_domain = $field['value'];
