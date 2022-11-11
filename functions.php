@@ -2,7 +2,7 @@
 /*
 Plugin Name: Elementor No Spam
 Description: This plugin reduces spam on Elementor forms.
-Version: 1.1.2
+Version: 1.1.3
 Author: Pina Data
 Author URI: https://www.pinadata.com
 License: GPLv2 or later
@@ -165,6 +165,7 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 	'plumb.angelica@gmail.com',
 	'earnnetwork381@gmail.com',
 	'reliablewebsiteranker@gmail.com',
+	'derektexas1111@proton.me',
     ];
 
     $email_domain = $field['value'];
