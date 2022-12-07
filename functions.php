@@ -2,7 +2,7 @@
 /*
 Plugin Name: Elementor No Spam
 Description: This plugin reduces spam on Elementor forms.
-Version: 1.1.3
+Version: 1.1.4
 Author: Pina Data
 Author URI: https://www.pinadata.com
 License: GPLv2 or later
@@ -58,6 +58,8 @@ add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record
 		'Local Business Free Marketing Club',
 		'generating more traffic',
 		'local businesses',
+		'Boost Sales',
+		'Qualified Leads',
 		// Phone numbers
 		'450',
 		'514',
