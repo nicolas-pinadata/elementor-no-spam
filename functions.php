@@ -16,25 +16,25 @@ function ens_prevent_urls_into_textarea() {
         ( function($) {
             $( 'textarea[id^="form-field-"]' ).keyup( function() {
                 const submitBtn = $( '.elementor-form button[type="submit"]' );
-                if (
-			isUrl( $(this).val() )
-			|| $(this).val().indexOf('@') != -1
-			|| $(this).val().indexOf('www.') != -1
-			|| $(this).val().indexOf('ftp.') != -1
-			|| $(this).val().indexOf('http') != -1
-			|| $(this).val().indexOf('.com') != -1
-			|| $(this).val().indexOf('.ca') != -1
-			|| $(this).val().indexOf('bit.ly') != -1
-		) {
-                    submitBtn.prop( 'disabled', true );
-                } else {
-                    submitBtn.prop( 'disabled', false );
-                }
-            });
-            function isUrl(s) {
-                const regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-                return regexp.test(s);
-            }
+			if (
+				isUrl( $(this).val() )
+				|| $(this).val().indexOf('@') != -1
+				|| $(this).val().indexOf('www.') != -1
+				|| $(this).val().indexOf('ftp.') != -1
+				|| $(this).val().indexOf('http') != -1
+				|| $(this).val().indexOf('.com') != -1
+				|| $(this).val().indexOf('.ca') != -1
+				|| $(this).val().indexOf('bit.ly') != -1
+			) {
+				submitBtn.prop( 'disabled', true );
+			} else {
+				submitBtn.prop( 'disabled', false );
+			}
+		});
+		function isUrl(s) {
+			const regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+			return regexp.test(s);
+		}
         })( jQuery );
     </script>
 <?php }
@@ -60,7 +60,7 @@ add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record
 		'local businesses',
 		'Boost Sales',
 		'Qualified Leads',
-		'Are you the owner of the website'
+		'Are you the owner of the website',
 		// Phone numbers
 		'450',
 		'514',
@@ -169,6 +169,13 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 	'earnnetwork381@gmail.com',
 	'reliablewebsiteranker@gmail.com',
 	'derektexas1111@proton.me',
+	'ajeng_kuswoyo@tf-info.com',
+	'gordonb95@yahoo.com',
+	'isobel72@hotmail.com',
+	'ajeng_kuswoyo@tf-info.com',
+	'aniya_bergnaum20@tf-info.com',
+	'gordonb95@yahoo.com',
+	'clint_hudson79@tf-info.com',
 	'mathewblochgetsitdone@gmail.com',
     ];
 
