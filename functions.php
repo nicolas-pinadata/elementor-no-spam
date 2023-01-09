@@ -2,7 +2,7 @@
 /*
 Plugin Name: Elementor No Spam
 Description: This plugin reduces spam on Elementor forms.
-Version: 1.1.4
+Version: 1.1.5
 Author: Pina Data
 Author URI: https://www.pinadata.com
 License: GPLv2 or later
