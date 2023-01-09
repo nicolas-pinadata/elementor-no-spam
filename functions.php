@@ -60,6 +60,7 @@ add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record
 		'local businesses',
 		'Boost Sales',
 		'Qualified Leads',
+		'Are you the owner of the website'
 		// Phone numbers
 		'450',
 		'514',
@@ -168,6 +169,7 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 	'earnnetwork381@gmail.com',
 	'reliablewebsiteranker@gmail.com',
 	'derektexas1111@proton.me',
+	'mathewblochgetsitdone@gmail.com',
     ];
 
     $email_domain = $field['value'];
