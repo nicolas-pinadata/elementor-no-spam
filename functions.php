@@ -63,6 +63,11 @@ add_action( 'elementor_pro/forms/validation/textarea', function( $field, $record
 		'Are you the owner of the website',
 		'attract new customers',
 		'Fellow Business Owner',
+		'improve your SEO',
+		'open for business',
+		'for free',
+		'boost your visibility',
+		'audit for free',
 		// Phone numbers
 		'450',
 		'514',
@@ -181,6 +186,8 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 		'mathewblochgetsitdone@gmail.com',
 		'john@jaabsa.com',
 		'finn_koster61@mailrez.com',
+	    	'bernd.spalding@yahoo.com',
+	    	'james@kkourier.com'
     ];
 
     $email_domain = $field['value'];
