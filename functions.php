@@ -187,7 +187,8 @@ add_action( 'elementor_pro/forms/validation/email', function( $field, $record, $
 		'john@jaabsa.com',
 		'finn_koster61@mailrez.com',
 	    	'bernd.spalding@yahoo.com',
-	    	'james@kkourier.com'
+	    	'james@kkourier.com',
+	    	'sabo.major@gmail.com'
     ];
 
     $email_domain = $field['value'];
